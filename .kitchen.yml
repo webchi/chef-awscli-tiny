@@ -23,4 +23,9 @@ suites:
     verifier:
       inspec_tests:
         - test/integration/default
-    attributes:
+    attributes:       
+      awscli: 
+        user: vagrant
+        region: eu-central-1
+        key_id: myawskeyid
+        secret_key: myawssecretkey    
