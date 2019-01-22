@@ -36,7 +36,7 @@ end
 execute 'add local path' do
     user uname
     command "sudo -u #{uname} -H sh -c 'echo export PATH=#{home_dir}/.local/bin:$PATH' >> #{home_dir}/.bashrc"
-    not_if "cat #{home_dir}/.bashrc | grep 'export PATH=~/.local/bin:$PATH'"
+    not_if "cat #{home_dir}/.bashrc | grep 'export PATH=#{home_dir}/.local/bin'"
 end
 
 execute 'install aws' do
