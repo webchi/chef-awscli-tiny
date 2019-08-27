@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the awscli-tiny cookbook.
 
+# 0.1.3
+
+- Remove extra config
+
 # 0.1.2
 
 - Move to python 3 support

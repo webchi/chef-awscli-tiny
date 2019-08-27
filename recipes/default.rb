@@ -49,20 +49,6 @@ directory "#{home_dir}/.aws" do
   action :create
 end
 
-template "#{home_dir}/.aws/config" do
-  source 'config.erb'
-  owner uname
-  group uname
-  mode '0600'
-end
-
-template "#{home_dir}/.aws/credentials" do
-  source 'credentials.erb'
-  owner uname
-  group uname
-  mode '0600'
-end
-
 file "#{home_dir}/get-pip.py" do
   action :delete
 end
