@@ -18,6 +18,7 @@ remote_file "#{home_dir}/get-pip.py" do
   owner uname
   group uname
   mode '0755'
+  not_if "test -e #{home_dir}/.local/bin/pip3"
 end
 
 execute 'install pip' do
